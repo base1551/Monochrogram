@@ -1,3 +1,6 @@
-<p>このページは仮のトップページ</p>
+<% if user_signed_in? %>
+  <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+<% end %>
 
-<%= link_to "仮のボタン" , "#", class: "btn btn-primary" %>
+<p>このページは仮のトップページ</p>
+<%= link_to "仮のボタン" , "#", class: "btn btn-primary" %>,
