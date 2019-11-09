@@ -32,28 +32,28 @@ RSpec.describe Post, type: :model do
 
   describe 'その他' do
     it '新しい順に並んでいること' do
-      # most_recent_post = FactoryBot.create(:post, created_at: Time.zone.now)
-      # FactoryBot.create(:post, created_at: 10.minutes.ago)
-      # FactoryBot.create(:post, created_at: 5.years.ago)
-      # FactoryBot.create(:post, created_at: 2.hours.ago)
+      most_recent_post = FactoryBot.create(:post, created_at: Time.zone.now)
+      FactoryBot.create(:post, created_at: 10.minutes.ago)
+      FactoryBot.create(:post, created_at: 5.years.ago)
+      FactoryBot.create(:post, created_at: 2.hours.ago)
 
-      # expect(most_recent_post).to eq Post.first
+      expect(most_recent_post).to eq Post.first
     end
 
     it '投稿を削除すると、関連するコメントも削除されること' do
-      # post = FactoryBot.create(:post, :with_comments, comments_count: 1)
+      post = FactoryBot.create(:post, :with_comments, comments_count: 1)
 
-      # expect do
-      #   post.destroy
-      # end.to change(Comment, :count).by(-1)
+      expect do
+        post.destroy
+      end.to change(Comment, :count).by(-1)
     end
 
     it '投稿を削除すると、関連するいいねも削除されること' do
-      # post = FactoryBot.create(:post, :with_likes, likes_count: 1)
+      post = FactoryBot.create(:post, :with_likes, likes_count: 1)
 
-      # expect do
-      #   post.destroy
-      # end.to change(Like, :count).by(-1)
+      expect do
+        post.destroy
+      end.to change(Like, :count).by(-1)
     end
   end
 end
