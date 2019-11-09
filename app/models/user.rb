@@ -9,6 +9,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, length: { maximum: 50 }
+  validates :email, length: { maximum: 255 }
+  validates :password, length: { minimum: 6 }
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)
