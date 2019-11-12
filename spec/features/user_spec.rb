@@ -12,7 +12,7 @@ RSpec.feature "Users", type: :feature do
     fill_in 'user_name', with: 'テストユーザー'
     fill_in 'user_password', with: 'password'
     fill_in 'user_password_confirmation', with: 'password'
-    click_button '登録する'
+    click_button '新規登録'
     expect(page).to have_content('アカウント登録が完了しました。')
   end
 
