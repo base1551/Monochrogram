@@ -16,13 +16,13 @@ RSpec.feature "Users", type: :feature do
     expect(page).to have_content('アカウント登録が完了しました。')
   end
 
-  scenario 'サインイン処理' do
+  scenario 'ログイン処理' do
     visit root_path
     expect(current_path).to eq new_user_session_path
 
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: user.password
-    click_button 'サインインする'
-    expect(page).to have_content('サインインしました。')
+    click_button 'ログイン'
+    expect(page).to have_content('ログインしました。')
   end
 end

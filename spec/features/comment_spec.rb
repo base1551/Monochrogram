@@ -6,7 +6,7 @@
 #     visit root_path
 #     fill_in 'user_email', with: user.email
 #     fill_in 'user_password', with: user.password
-#     click_button 'サインインする'
+#     click_button 'ログイン'
 
 #     visit root_path
 #     click_on '投稿'

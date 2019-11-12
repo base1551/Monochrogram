@@ -11,10 +11,10 @@
 
 #   context 'ユーザーAがログインしているとき' do
 #     before do
-#       visit login_path  #ユーザーAでログインする
+#       visit login_path  #ユーザーAでログイン
 #       fill_in 'メールアドレス', with: 'a@example.com' #メールアドレスを入力する
 #       fill_in 'パスワード', with: 'password' #パスワードを入力する
-#       click_button 'サインインする' #サインインボタンを押す
+#       click_button 'ログイン' #ログインボタンを押す
 #     end
 
 #     it '全てのユーザーが作成したPostが表示される' do

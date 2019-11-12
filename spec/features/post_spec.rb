@@ -7,7 +7,7 @@ RSpec.feature "Posts", type: :feature do
     visit root_path
     fill_in 'user_email', with: 'test1@example.com'
     fill_in 'user_password', with: user.password
-    click_button 'サインインする'
+    click_button 'ログイン'
 
     visit root_path
     click_on '投稿'
