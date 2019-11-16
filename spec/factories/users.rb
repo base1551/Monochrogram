@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
     sequence(:name)  { |n| "テストユーザー#{n}" }
-    sequence(:email) { |n| "test#{n}@example.com" }
+    sequence(:email) { |n| "testuser#{n}@example.com" }
     password { 'password' }
 
     trait :unconfirmed do

@@ -11,11 +11,6 @@ RSpec.describe Post, type: :model do
       post.user = nil
       expect(post).to be_invalid
     end
-
-    it '画像がなければ無効な状態であること' do
-      # post.photos = nil
-      # expect(post).to be_invalid
-    end
   end
 
   describe 'メソッド' do
