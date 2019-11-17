@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Karaage</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=devise-width, initial-scale=1" >
+<head>
+  <title>Karaage</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <meta name="viewport" content="width=devise-width, initial-scale=1">
 
-  <body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= render 'partial/navbar' if current_user %>
-    <%# <div id="wrapper"> %>
+<body>
 
-    <% if flash[:notice] %>
-      <div class="alert alert-info">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger">
-        <%= flash[:alert] %>
-      </div>
-    <% end %>
-    <script>
-      $(function () {
-        $(".alert").fadeOut(4000);
-      });
-    </script>
+  <%= render 'partial/navbar' if current_user %>
 
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col no-gutters">
-          <%= yield %>
-       </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col no-gutters">
+        <% if flash[:notice] %>”
+        <div class="alert alert-info">
+          <%= flash[:notice] %>
+        </div>
+        <% end %>
+        <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
+        </div>
+        <% end %>
+        <script>
+          $(function () {
+            $(".alert").fadeOut(4000);
+          });
+        </script>
+        <%= yield %>
       </div>
     </div>
+  </div>
 
-    <%= render 'partial/footer' %>
-    <%# </div> %>
-  </body>
+  <%= render 'partial/footer' %>
+</body>
+
 </html>
