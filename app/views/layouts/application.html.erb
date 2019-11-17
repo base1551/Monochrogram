@@ -26,6 +26,12 @@
           <%= flash[:alert] %>
         </div>
       <% end %>
+      <script>
+        $(function () {
+          $(".alert").fadeOut(4000);
+        });
+      </script>
+
 
       <div class="container">
         <%= yield %>
