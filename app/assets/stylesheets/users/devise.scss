@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-.devise-card {
-  border: none;
-}
-
 .form-wrap{
   max-width: 400px;
   width: 100%;
@@ -28,6 +24,10 @@
   background-size: 180px!important;
 }
 
+.logo-explanation {
+  font-size: 15px;
+}
+
 .form-control {
   border: 1px solid #dcdfe6;
   font-size: inherit;
@@ -38,11 +38,14 @@
   margin: 16px 0;
 }
 
-#wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-size: cover;
+  // background-image: image-url("karaage.jpg");
 }
+
 
 footer {
   margin-top: auto;
