@@ -15,8 +15,8 @@
             </div>
           </div>
           <div class="mb-3">
-
             <%= f.fields_for :photos do |i| %>
+              <%= i.label :image, "画像" %>
               <%= i.file_field :image %>
             <% end %>
 

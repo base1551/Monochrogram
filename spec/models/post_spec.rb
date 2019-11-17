@@ -50,5 +50,13 @@ RSpec.describe Post, type: :model do
         post.destroy
       end.to change(Like, :count).by(-1)
     end
+
+    it '削除すると、関連する画像も削除されること' do
+      post = FactoryBot.create(:post, :with_photos, photos_count: 1)
+
+      expect do
+        post.destroy
+      end.to change(Photo, :count).by(-1)
+    end
   end
 end

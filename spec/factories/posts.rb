@@ -3,6 +3,16 @@ FactoryBot.define do
     caption { 'It so delicious' }
     association :user
 
+    trait :with_photos do
+      transient do
+        photos_count { 1 }
+      end
+
+      after(:create) do |post, evaluator|
+        create_list(:photo, evaluator.photos_count, post: post)
+      end
+    end
+
     trait :with_comments do
       transient do
         comments_count { 5 }
