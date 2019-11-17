@@ -16,10 +16,11 @@
 
   <%= render 'partial/navbar' if current_user %>
 
+
   <div class="container-fluid">
     <div class="row">
       <div class="col no-gutters">
-        <% if flash[:notice] %>”
+        <% if flash[:notice] %>
         <div class="alert alert-info">
           <%= flash[:notice] %>
         </div>
@@ -34,6 +35,8 @@
             $(".alert").fadeOut(4000);
           });
         </script>
+
+
         <%= yield %>
       </div>
     </div>
