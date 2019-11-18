@@ -47,9 +47,13 @@
 .top-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: image-url("karaage.jpg");
+
 }
 
 footer {

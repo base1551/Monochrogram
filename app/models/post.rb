@@ -15,10 +15,6 @@ class Post < ApplicationRecord
     like_users.inculde?(user)
   end
 
-  # def to_param
-  #   url_token
-  # end
-
   def like(user)
     likes.create(user_id: user.id)
   end
