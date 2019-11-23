@@ -14,7 +14,7 @@
 }
 
 .black-color {
-  color: #262626;
+  color: #fff;
 }
 
 .parts {
@@ -43,8 +43,21 @@
   flex-wrap: no-wrap;
 }
 
+.comment-box:focus {
+  outline: none;
+}
+
+.content-input:focus {
+  outline: none;
+}
+
 .comment-input {
   flex-grow: 2;
+  background-color: #262626;
+}
+.comment-input:hover {
+  border: none;
+  background-color: #262626;
 }
 
 .comment-submit {
@@ -52,6 +65,7 @@
   display: inline-block;
   border-radius: 4px;
   font-weight: bold;
+  color: #fff;
   text-align: center;
   line-height: 1;
   padding: 1em;
@@ -65,10 +79,20 @@
 
 .post-sub-text {
   text-decoration: none;
-  color: #262626;
+  color: #2b2b2b;
 }
 .post-wrap .col-md-8 {
   padding: 0px;
+}
+
+.card {
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  // border: 1px solid darkgray;
 }
 
 .card-right {
@@ -77,19 +101,19 @@
 
 .card-right-name {
   padding-bottom: 10px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid gray;
   display: flex;
 }
 
 .card-right-comment {
   padding-bottom: 10px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid gray;
   height: 320px;
   overflow: auto;
 }
 
 .postShow-wrap {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #2b2b2b;
   margin: 40px;
 }
 
@@ -104,7 +128,7 @@
   width: 20px;
   height: 20px;
   background-size: 20px !important;
-  color: #262626;
+  color: #2b2b2b;
   font-size: 20px;
 }
 .loved {
