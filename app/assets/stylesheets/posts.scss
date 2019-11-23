@@ -38,6 +38,25 @@
   background-size: 40px !important;
 }
 
+.comment-box {
+  display: flex;
+  flex-wrap: no-wrap;
+}
+
+.comment-input {
+  flex-grow: 2;
+}
+
+.comment-submit {
+  flex-grow: 1;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 1em;
+}
+
 .post-time {
   margin:0;
   color:#999;
