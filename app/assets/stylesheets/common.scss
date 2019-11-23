@@ -14,3 +14,59 @@ body {
   margin:0;
   padding:0;
 }
+
+.button_h1 {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em 2em;
+  color: #545454;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #545454;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button_h1:before,
+.button_h1:after{
+  content: '';
+  display: block;
+  position: absolute;
+  border-color: #545454;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_h1:before{
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+  z-index: 1;
+}
+
+.button_h1:after{
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+  z-index: 1;
+}
+
+.button_h1:hover:before,
+.button_h1:hover:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #545454;
+}
+
+.button_h1:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #454545;
+  border-color: #fff;
+  }
