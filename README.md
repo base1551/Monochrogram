@@ -1,24 +1,20 @@
-# README
+# Monochrogram
+モノクロ画像の投稿をコンセプトとしたInstagram風アプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### URL
+https://frozen-oasis-15554.herokuapp.com/users/sign_in
 
-Things you may want to cover:
+- 画面下部の「簡単ログイン」からtestユーザーとしてログイン出来ます。
 
-* Ruby version
+### 使用技術
+- Ruby 2.6.3, Rails 5.2.3
+- SASS, Bootstrap, JQuery
+- Rspec
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 機能概要
+- Rspecによる自動テスト機能
+- ユーザー登録・ログイン機能(deviseを使用)
+- 画像投稿機能(CarrirWaveを使用)
+- 投稿一覧・投稿詳細表示機能
+- いいね機能
+- コメント機能
