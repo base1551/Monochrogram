@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :post do
-    caption { 'It so delicious' }
+    caption { 'It so cool' }
     association :user
 
     trait :with_photos do

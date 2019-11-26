@@ -58,13 +58,11 @@ RSpec.describe User, type: :model do
   describe "文字数の検証" do
     it "名前が50文字以内だと有効であること" do
       @user.name = 'a' * 50
-      # expect(@user.valid?).to eq(false)
       expect(@user).to be_valid
     end
 
     it "名前が50文字以上だと無効であること" do
       @user.name = 'a' * 51
-      # expect(@user.valid?).to eq(false)
       expect(@user).to be_invalid
     end
 

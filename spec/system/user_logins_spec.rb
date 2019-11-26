@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "UserLogins", type: :system do
-  # 登録すみユーザー作成
+  # 登録済みのユーザーを作成
   let(:user) { FactoryBot.create :user }
-  # ログイン画面
+
+  # ログイン画面へ遷移
   before do
     visit new_user_session_path
   end
