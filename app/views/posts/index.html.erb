@@ -17,6 +17,8 @@
             <% end %>
           <% end %>
         </div>
+        <%= render ‘relationships/follow_button’, user: @user %>
+        
         <%= link_to(post_path(post)) do %>
           <%= image_tag post.photos.first.image.url(:medium), class: "card-img-top" %>
         <% end %>
