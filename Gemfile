@@ -53,6 +53,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
   gem 'rails-erd'
+  gem 'rubocop', require: false
+  gem 'rubocop-rails'
 end
 
 group :test do
@@ -77,3 +79,8 @@ gem 'mini_magick'
 gem 'pg', group: :production
 # gem 'mysql2', '~> 0.4.10'
 gem 'rails-i18n'
+gem 'will_paginate'
+gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pry-doc'
+

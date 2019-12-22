@@ -1,7 +1,8 @@
-class Relationship < ApplicationRecord
-  belongs_to :user
-  belongs_to :follow, class_name: 'User' #followクラスという存在しないクラスを参照することを防ぐ、Userモデルを参照する様に指示
+# frozen_string_literal: true
 
-  validates :user_id, presence: true
-  validates :follow_id, presence: true
+class Relationship < ApplicationRecord
+  belongs_to :follower, class_name: 'User' # followerメソッドを定義
+  belongs_to :followed, class_name: 'User' # followedメソッドを定義
+  validates :follower_id,  presence: true
+  validates :followed_id,  presence: true
 end

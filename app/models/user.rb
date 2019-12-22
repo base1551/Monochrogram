@@ -2,10 +2,18 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes
   has_many :comments
-  has_many :relationships
-  has_many :followings, through: :relationships, source: :follow #followingモデルは存在しないのでthroughで中間モデルである事を補足。source: :followでrelationshipsテーブルのfollow_idを参考にアクセスすることを補足
-  has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id' #has_many :relationshipsの逆と言う意味
-  has_many :followrs, through: :reverse_of_relationships, source: :user
+  has_many :active_relationships,   class_name:   "Relationship",
+                                    foreign_key:  "follower_id", # デフォルトではuser_idに紐づけられるので指定
+                                    dependent:    :destroy
+  has_many :passive_relationships,  class_name:   "Relationship",
+                                    foreign_key:  "followed_id", # デフォルトではuser_idに紐づけられるので指定
+                                    dependent:    :destroy
+  has_many :following,
+            through: :active_relationships, # active_relationshipsメソッドを呼び出し
+            source: :followed               # 各要素に対してfollowedメソッドを実行
+  has_many :followers,
+            through: :passive_relationships, # active_relationshipsメソッドを呼び出し
+            source: :follower                # 各要素に対してfollowedメソッドを実行
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -31,21 +39,18 @@ class User < ApplicationRecord
 
   # フォロー機能のメソッド
 
-  # フォローユーザーが自分自身でなければ
-  def follow(other_user) #self = 実行したUserのインスタンス
-    unless self == other_user
-      self.relationships.find_or_create_by(follow_id: other_user.id)
-    end
+  # ユーザーをフォローする
+  def follow(other_user)
+    following << other_user
   end
 
   # アンフォロー
   def unfollow(other_user)
-    relationship = self.relationships.find_by(follow_id: other_user.id)
-    relationship.destroy if relationship #後置if文
+    active_relationships.find_by(followed_id: other_user.id).destroy
   end
 
   # 既にフォロー済みのユーザーに含まれていないか確認
   def following?(other_user)
-    self.followings.include?(other_user)
+    following.include?(other_user)
   end
 end
