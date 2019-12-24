@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Likes", type: :system do
 
   it "投稿にいいね/いいね解除する", js: true do
-   # ユーザー・投稿を作成
+    # ユーザー・投稿を作成
     user = FactoryBot.create(:user)
     post = FactoryBot.create(:post, :with_photos, photos_count: 1, user: user)
 

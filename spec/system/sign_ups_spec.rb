@@ -5,8 +5,8 @@ RSpec.describe "SignUps", type: :system do
     visit new_user_registration_path
   end
 
-  # 有効なテストの場合
-  describe '有効なテストの場合' do
+  # 有効なユーザーの場合
+  describe '有効なユーザーの場合' do
     before do
       fill_in 'メールアドレス', with: 'foo@example.com'
       fill_in 'フルネーム', with: 'foo@example.com'
