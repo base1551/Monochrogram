@@ -76,11 +76,10 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'carrierwave', '~> 1.3.1'
 gem 'mini_magick'
-gem 'pg', group: :production
-# gem 'mysql2', '~> 0.4.10'
+# gem 'pg', group: :production
 gem 'rails-i18n'
 gem 'will_paginate'
 gem 'pry-rails'
 gem 'pry-byebug'
 gem 'pry-doc'
-
+gem 'mysql2'
