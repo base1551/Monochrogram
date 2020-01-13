@@ -1,5 +1,5 @@
 # Monochrogram
-モノクロ画像の投稿をコンセプトとしたInstagram風アプリです。
+画像の投稿をコンセプトとしたInstagram風アプリです。
 
 ### URL
 https://www.monochrogram-app.xyz/
