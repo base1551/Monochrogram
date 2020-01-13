@@ -83,4 +83,9 @@ gem 'will_paginate'
 gem 'pry-rails'
 gem 'pry-byebug'
 gem 'pry-doc'
+gem 'dotenv-rails'
+
+group :production, :staging do
+    gem 'unicorn'
+end
 

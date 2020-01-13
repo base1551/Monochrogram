@@ -1,0 +1,31 @@
+.navbar {
+  background-color: #2b2b2b;
+  border-bottom: 1px solid gray;
+  height: 77px;
+  &__brand {
+    height: 35px;
+    width: 176px;
+    background-size: 114px;
+  }
+  &__mainLogo {
+    background-repeat: no-repeat;
+    background-image: image-url("logo.png");
+  }
+  &-nav {
+    & > li {
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      .commonNavIcon {
+        height: 24px;
+        width: 24px;
+        background-size: 22px !important;
+        background-repeat: no-repeat;
+      }
+      .profile-icon {
+        background-image: image-url("parts3.png");
+      }
+    }
+  }
+}

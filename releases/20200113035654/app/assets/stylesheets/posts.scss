@@ -1,0 +1,152 @@
+.post-profile-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-wrap {
+  margin: 40px 0px;
+}
+
+.no-text-decoration:hover {
+  text-decoration: none;
+}
+
+.black-color {
+  color: #fff;
+}
+
+.parts {
+  margin: 12px 0;
+}
+
+.love {
+  background-image: image-url("parts5");
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 36px !important;
+}
+
+.comment {
+  margin-left: 8px;
+  background-image: image-url("parts6");
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 40px !important;
+}
+
+.comment-box {
+  display: flex;
+  flex-wrap: no-wrap;
+}
+
+.comment-box:focus {
+  outline: none;
+}
+
+.content-input:focus {
+  outline: none;
+}
+
+.comment-input {
+  flex-grow: 2;
+  background-color: #fff;
+}
+
+// .comment-submit {
+//   flex-grow: 1;
+//   display: inline-block;
+//   border-radius: 4px;
+//   font-weight: bold;
+//   color: #fff;
+//   text-align: center;
+//   line-height: 1;
+//   padding: 1em;
+// }
+
+.post-time {
+  margin:0;
+  color:#999;
+  font-size:10px;
+}
+
+.post-sub-text {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.post-wrap .col-md-8 {
+  padding: 0px;
+}
+
+.card {
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  // border: 1px solid darkgray;
+}
+
+.card-right {
+  padding: 20px;
+}
+
+.card-right-name {
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+  display: flex;
+}
+
+.card-right-comment {
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+  height: 320px;
+  overflow: auto;
+}
+
+.postShow-wrap {
+  border: 1px solid #2b2b2b;
+  margin: 40px;
+}
+
+.post-user-name {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+.delete-post-icon {
+  background-image: image-url("parts9");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 20px !important;
+  color: #2b2b2b;
+  font-size: 20px;
+}
+.loved {
+  background-image: image-url("parts7");
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 36px !important;
+}
+
+.hide-text {
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+}
+.delete-comment {
+  background-image: image-url("parts8");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 11px;
+  float: right;
+  margin: 5px 0 0 10px;
+  background-size: 11px !important;
+}
