@@ -1,8 +1,5 @@
 # Monochrogram
-モノクロ画像の投稿をコンセプトとしたInstagram風アプリです。
-
-### URL
-https://frozen-oasis-15554.herokuapp.com/users/sign_in
+画像の投稿をコンセプトとしたInstagram風アプリです。
 
 - 画面下部の「簡単ログイン」からtestユーザーとしてログイン出来ます。
 
