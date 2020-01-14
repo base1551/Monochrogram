@@ -2,13 +2,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
   password:
+  username: root
   host: localhost
 
 development:
   <<: *default
-  database: Monochrogram_development
+  database: Monchrogram_development
 
 test:
   <<: *default
