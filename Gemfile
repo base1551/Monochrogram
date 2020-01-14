@@ -72,6 +72,7 @@ gem 'pry-rails'
 gem 'pry-byebug'
 gem 'pry-doc'
 gem 'dotenv-rails'
+gem 'mysql2'
 
 group :production, :staging do
     gem 'unicorn'
