@@ -3,7 +3,7 @@ default: &default
   encoding: utf8
   pool: 5
   password: password
-  username: root
+  username: <%= ENV['DB_USERNAME'] %>
   host: localhost
 
 development:
