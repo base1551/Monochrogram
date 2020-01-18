@@ -9,10 +9,19 @@ default: &default
 development:
   <<: *default
   database: Monchrogram_development
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
 
 test:
   <<: *default
   database: Monochrogram_test
+  pool: 5
+  username: root
+  password:
+  host: localhost
 
 production:
   <<: *default

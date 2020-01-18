@@ -10,11 +10,13 @@
         <section class="stats">
           <%= render 'shared/stats' %>
         </section>
-        
+
         <%= render 'follow_form' if user_signed_in? %>
 
-        <% if @user == current_user %>
-          <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-light common-btn edit-profile-btn" %>
+        <% if @user == current_user%>
+          <%  unless @user.email == "test@example.com" %>
+            <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-light common-btn edit-profile-btn" %>
+          <% end %>
           <button type="button" class="setting" data-toggle="modal" data-target="#exampleModal"></button>
         <% end %>
 
