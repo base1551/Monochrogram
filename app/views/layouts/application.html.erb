@@ -19,28 +19,22 @@
     <%= render 'partial/navbar' if current_user %>
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col no-gutters">
-          <% if flash[:notice] %>
-          <div class="alert">
-            <%= flash[:notice] %>
-          </div>
-          <% end %>
-          <% if flash[:alert] %>
-          <div class="alert">
-            <%= flash[:alert] %>
-          </div>
-          <% end %>
-          <script>
-            $(function () {
-              $(".alert").fadeOut(4000);
-            });
-          </script>
-
-
-          <%= yield %>
-        </div>
+      <% if flash[:notice] %>
+      <div class="alert">
+        <%= flash[:notice] %>
       </div>
+      <% end %>
+      <% if flash[:alert] %>
+      <div class="alert">
+        <%= flash[:alert] %>
+      </div>
+      <% end %>
+      <script>
+        $(function () {
+          $(".alert").fadeOut(4000);
+        });
+      </script>
+      <%= yield %>
     </div>
 
     <%= render 'partial/footer' %>
