@@ -2,7 +2,7 @@
 画像の投稿をコンセプトとしたInstagram風アプリです。
 
 ### URL
-https://www.monochrogram-app.xyz/
+https://www.monochrogram-app.com/
 
 - 画面下部の「簡単ログイン」からtestユーザーとしてログイン出来ます。
 
