@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_paranoid # 論理削除
   has_many :posts, dependent: :destroy
   has_many :likes
   has_many :comments

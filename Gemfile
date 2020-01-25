@@ -73,6 +73,7 @@ gem 'pry-byebug'
 gem 'pry-doc'
 gem 'dotenv-rails'
 gem 'mysql2'
+gem 'paranoia'
 
 group :production, :staging do
     gem 'unicorn'
